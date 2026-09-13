@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
@@ -18,10 +18,12 @@ public class PlayerMove : MonoBehaviour
     private bool isGrounded = true;
     private bool isCrouching = false;
     private Vector3 originalScale;
+    private float initialY;
 
     void Start()
     {
         originalScale = transform.localScale;
+        initialY = transform.position.y;
     }
 
     void Update()
@@ -57,9 +59,9 @@ public class PlayerMove : MonoBehaviour
             verticalVelocity += gravity * Time.deltaTime;
             transform.Translate(Vector3.up * verticalVelocity * Time.deltaTime);
 
-            if (transform.position.y <= 0.5f) // Adjust based on ground height
+            if (transform.position.y <= initialY) // Adjust based on ground height
             {
-                transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+                transform.position = new Vector3(transform.position.x, initialY, transform.position.z);
                 isGrounded = true;
                 verticalVelocity = 0f;
                 Debug.Log("🟩 Landed!");
