@@ -1,4 +1,4 @@
-# 🏃‍♂️ Endless Runner Unity 3D
+# 🏃‍♂️ Kachujin Endless Runner Unity 3D
 
 A fast-paced **3D Endless Runner Game** built with **Unity 6 (2023+)**, featuring smooth controls, lane-based movement, jumping, and crouching mechanics — inspired by classics like *Temple Run* and *Subway Surfers*.
 
